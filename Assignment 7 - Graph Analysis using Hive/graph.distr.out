@@ -1,0 +1,703 @@
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ibnet/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/opt/hadoop/2.6.0
+myHadoop: Using MH_SCRATCH_DIR=/scratch/vishnug/37143415
+myHadoop: Using JAVA_HOME=/lib/jvm/java
+myHadoop: Generating Hadoop configuration in directory in /home/vishnug/cometcluster...
+myHadoop: Backing up old config dir to /home/vishnug/cometcluster.30...
+‘/home/vishnug/cometcluster’ -> ‘/home/vishnug/cometcluster.30’
+myHadoop: Designating comet-14-01.ibnet as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+comet-14-01.ibnet
+comet-14-02.ibnet
+20/11/24 15:26:17 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = comet-14-01.sdsc.edu/198.202.112.231
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.6.0
+STARTUP_MSG:   classpath = /home/vishnug/cometcluster:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-framework-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsch-0.1.42.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpclient-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jets3t-0.9.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-recipes-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-auth-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-digester-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpcore-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-configuration-1.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/mockito-all-1.8.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-net-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/gson-2.2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-math3-3.1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-client-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jline-0.9.94.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-registry-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-api-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-tests-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0-tests.jar:/opt/hadoop/2.6.0/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r e3496499ecb8d220fba99dc5ed4c99c8f9e33bb1; compiled by 'jenkins' on 2014-11-13T21:10Z
+STARTUP_MSG:   java = 1.8.0_212
+************************************************************/
+20/11/24 15:26:17 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+20/11/24 15:26:17 INFO namenode.NameNode: createNameNode [-format]
+20/11/24 15:26:18 WARN common.Util: Path /scratch/vishnug/37143415/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+20/11/24 15:26:18 WARN common.Util: Path /scratch/vishnug/37143415/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+Formatting using clusterid: CID-e5ba02be-9fd2-4d6c-8b12-a5a24c40e56b
+20/11/24 15:26:18 INFO namenode.FSNamesystem: No KeyProvider found.
+20/11/24 15:26:18 INFO namenode.FSNamesystem: fsLock is fair:true
+20/11/24 15:26:18 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+20/11/24 15:26:18 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: The block deletion will start around 2020 Nov 24 15:26:18
+20/11/24 15:26:18 INFO util.GSet: Computing capacity for map BlocksMap
+20/11/24 15:26:18 INFO util.GSet: VM type       = 64-bit
+20/11/24 15:26:18 INFO util.GSet: 2.0% max memory 966.7 MB = 19.3 MB
+20/11/24 15:26:18 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: defaultReplication         = 3
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: maxReplication             = 512
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: minReplication             = 1
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+20/11/24 15:26:18 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+20/11/24 15:26:18 INFO namenode.FSNamesystem: fsOwner             = vishnug (auth:SIMPLE)
+20/11/24 15:26:18 INFO namenode.FSNamesystem: supergroup          = supergroup
+20/11/24 15:26:18 INFO namenode.FSNamesystem: isPermissionEnabled = true
+20/11/24 15:26:18 INFO namenode.FSNamesystem: HA Enabled: false
+20/11/24 15:26:18 INFO namenode.FSNamesystem: Append Enabled: true
+20/11/24 15:26:18 INFO util.GSet: Computing capacity for map INodeMap
+20/11/24 15:26:18 INFO util.GSet: VM type       = 64-bit
+20/11/24 15:26:18 INFO util.GSet: 1.0% max memory 966.7 MB = 9.7 MB
+20/11/24 15:26:18 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+20/11/24 15:26:18 INFO namenode.NameNode: Caching file names occuring more than 10 times
+20/11/24 15:26:18 INFO util.GSet: Computing capacity for map cachedBlocks
+20/11/24 15:26:18 INFO util.GSet: VM type       = 64-bit
+20/11/24 15:26:18 INFO util.GSet: 0.25% max memory 966.7 MB = 2.4 MB
+20/11/24 15:26:18 INFO util.GSet: capacity      = 2^18 = 262144 entries
+20/11/24 15:26:18 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+20/11/24 15:26:18 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+20/11/24 15:26:18 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+20/11/24 15:26:18 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+20/11/24 15:26:18 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+20/11/24 15:26:18 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+20/11/24 15:26:18 INFO util.GSet: VM type       = 64-bit
+20/11/24 15:26:18 INFO util.GSet: 0.029999999329447746% max memory 966.7 MB = 297.0 KB
+20/11/24 15:26:18 INFO util.GSet: capacity      = 2^15 = 32768 entries
+20/11/24 15:26:18 INFO namenode.NNConf: ACLs enabled? false
+20/11/24 15:26:18 INFO namenode.NNConf: XAttrs enabled? true
+20/11/24 15:26:18 INFO namenode.NNConf: Maximum size of an xattr: 16384
+20/11/24 15:26:18 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1935691419-198.202.112.231-1606260378358
+20/11/24 15:26:18 INFO common.Storage: Storage directory /scratch/vishnug/37143415/namenode_data has been successfully formatted.
+20/11/24 15:26:18 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+20/11/24 15:26:18 INFO util.ExitUtil: Exiting with status 0
+20/11/24 15:26:18 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at comet-14-01.sdsc.edu/198.202.112.231
+************************************************************/
+Starting namenodes on [comet-14-01.ibnet]
+comet-14-01.ibnet: starting namenode, logging to /scratch/vishnug/37143415/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.out
+comet-14-01.ibnet: starting datanode, logging to /scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.out
+comet-14-02.ibnet: starting datanode, logging to /scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-02.sdsc.edu.out
+Starting secondary namenodes [comet-14-01.ibnet]
+comet-14-01.ibnet: starting secondarynamenode, logging to /scratch/vishnug/37143415/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.out
+starting yarn daemons
+starting resourcemanager, logging to /scratch/vishnug/37143415/logs/yarn-vishnug-resourcemanager-comet-14-01.out
+comet-14-01.ibnet: starting nodemanager, logging to /scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.out
+comet-14-02.ibnet: starting nodemanager, logging to /scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-02.sdsc.edu.out
+which: no hbase in (/opt/hadoop/2.6.0/sbin:/opt/hadoop/contrib/myHadoop/bin:/opt/hadoop/2.6.0/bin:/opt/mvapich2/intel/ib/bin:/opt/intel/2018.1.163/compilers_and_libraries_2018.1.163/linux/bin/intel64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/sdsc/bin:/opt/sdsc/sbin:/opt/ibutils/bin:/opt/pdsh/bin:/opt/rocks/bin:/opt/rocks/sbin:/home/vishnug/bin)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/oasis/projects/nsf/uot143/fegaras/apache-hive-2.1.0-bin/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/oasis/projects/nsf/uot143/fegaras/apache-hive-2.1.0-bin/lib/hive-common-2.1.0.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 3.71 seconds
+OK
+Time taken: 0.706 seconds
+Loading data to table default.graph
+OK
+Time taken: 2.062 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = vishnug_20201124152707_4562d738-0d21-4c38-bc6d-299973963aaf
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1606260399414_0001, Tracking URL = http://comet-14-01.ibnet:8088/proxy/application_1606260399414_0001/
+Kill Command = /opt/hadoop/2.6.0/bin/hadoop job  -kill job_1606260399414_0001
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2020-11-24 15:27:23,018 Stage-1 map = 0%,  reduce = 0%
+2020-11-24 15:27:50,126 Stage-1 map = 67%,  reduce = 0%, Cumulative CPU 35.76 sec
+2020-11-24 15:27:53,247 Stage-1 map = 69%,  reduce = 0%, Cumulative CPU 39.39 sec
+2020-11-24 15:27:56,357 Stage-1 map = 89%,  reduce = 0%, Cumulative CPU 42.98 sec
+2020-11-24 15:27:57,378 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 44.79 sec
+2020-11-24 15:28:08,784 Stage-1 map = 100%,  reduce = 89%, Cumulative CPU 52.84 sec
+2020-11-24 15:28:10,860 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 52.84 sec
+MapReduce Total cumulative CPU time: 52 seconds 840 msec
+Ended Job = job_1606260399414_0001
+Launching Job 2 out of 3
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1606260399414_0002, Tracking URL = http://comet-14-01.ibnet:8088/proxy/application_1606260399414_0002/
+Kill Command = /opt/hadoop/2.6.0/bin/hadoop job  -kill job_1606260399414_0002
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2020-11-24 15:28:16,684 Stage-2 map = 0%,  reduce = 0%
+2020-11-24 15:28:21,818 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 1.1 sec
+2020-11-24 15:28:25,935 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 2.49 sec
+MapReduce Total cumulative CPU time: 2 seconds 490 msec
+Ended Job = job_1606260399414_0002
+Launching Job 3 out of 3
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1606260399414_0003, Tracking URL = http://comet-14-01.ibnet:8088/proxy/application_1606260399414_0003/
+Kill Command = /opt/hadoop/2.6.0/bin/hadoop job  -kill job_1606260399414_0003
+Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 1
+2020-11-24 15:28:30,565 Stage-3 map = 0%,  reduce = 0%
+2020-11-24 15:28:34,717 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 1.11 sec
+2020-11-24 15:28:39,873 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 2.68 sec
+MapReduce Total cumulative CPU time: 2 seconds 680 msec
+Ended Job = job_1606260399414_0003
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 55.77 sec   HDFS Read: 140803563 HDFS Write: 6104 SUCCESS
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 2.49 sec   HDFS Read: 10531 HDFS Write: 6084 SUCCESS
+Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 2.68 sec   HDFS Read: 11152 HDFS Write: 5636 SUCCESS
+Total MapReduce CPU Time Spent: 1 minutes 0 seconds 940 msec
+OK
+6	24711
+5	24340
+7	24268
+4	23470
+8	23418
+9	22145
+3	20831
+10	20814
+11	19762
+12	18360
+13	17333
+2	16885
+14	15946
+15	14763
+16	13873
+17	12796
+18	11821
+1	11313
+19	11124
+20	10100
+21	9541
+22	8930
+23	8382
+24	7879
+25	7313
+26	6766
+27	6063
+28	5598
+29	5260
+30	4848
+31	4587
+32	4545
+33	4242
+34	4065
+35	3959
+36	3684
+37	3519
+38	3305
+39	3063
+40	2736
+41	2500
+42	2256
+43	2097
+45	1857
+44	1818
+46	1679
+53	1623
+48	1604
+52	1601
+50	1569
+51	1567
+47	1561
+54	1558
+49	1546
+55	1433
+56	1413
+57	1282
+58	1217
+59	1064
+60	1037
+61	926
+62	759
+63	750
+64	607
+81	545
+80	531
+83	528
+78	517
+77	517
+65	512
+82	506
+66	494
+75	478
+76	478
+79	471
+67	462
+74	461
+85	451
+84	448
+73	441
+72	435
+70	428
+69	425
+71	405
+68	403
+86	393
+87	362
+88	352
+89	317
+90	267
+91	253
+92	213
+93	176
+94	167
+118	159
+116	147
+126	146
+119	143
+117	142
+123	140
+120	139
+125	132
+95	130
+124	130
+114	129
+115	128
+121	126
+112	125
+122	123
+96	122
+127	113
+128	111
+113	107
+98	106
+129	98
+131	95
+130	94
+97	93
+111	90
+110	88
+99	88
+109	84
+108	76
+104	75
+107	73
+133	73
+101	71
+132	69
+134	67
+103	66
+106	65
+100	63
+105	62
+135	55
+102	54
+136	52
+139	38
+137	37
+138	36
+183	34
+188	33
+176	33
+180	31
+177	31
+186	30
+175	27
+142	27
+181	26
+140	26
+193	26
+141	25
+189	25
+173	25
+169	24
+170	23
+143	23
+182	23
+184	23
+190	23
+191	22
+178	22
+192	21
+172	20
+174	20
+168	20
+166	20
+185	19
+167	19
+187	18
+171	18
+179	18
+194	17
+144	16
+164	15
+196	15
+165	14
+199	13
+195	13
+197	12
+160	12
+150	11
+145	10
+205	10
+198	10
+163	10
+157	9
+207	9
+265	9
+158	9
+147	8
+159	8
+161	8
+201	8
+149	8
+203	8
+204	8
+275	7
+162	7
+211	7
+200	7
+208	7
+280	7
+156	7
+277	6
+273	6
+152	6
+274	6
+148	6
+264	6
+282	5
+151	5
+154	5
+202	5
+209	5
+271	5
+269	5
+259	5
+255	5
+253	4
+268	4
+278	4
+155	4
+263	4
+262	4
+276	4
+210	4
+261	4
+270	4
+146	3
+294	3
+286	3
+281	3
+272	3
+267	3
+260	3
+258	3
+257	3
+254	3
+251	3
+153	3
+369	2
+244	2
+213	2
+389	2
+221	2
+289	2
+290	2
+403	2
+206	2
+292	2
+295	2
+247	2
+249	2
+252	2
+266	2
+240	2
+303	2
+291	1
+212	1
+217	1
+219	1
+220	1
+223	1
+224	1
+234	1
+237	1
+245	1
+246	1
+279	1
+283	1
+285	1
+288	1
+297	1
+298	1
+300	1
+301	1
+302	1
+383	1
+385	1
+394	1
+396	1
+402	1
+405	1
+409	1
+410	1
+413	1
+415	1
+420	1
+422	1
+435	1
+635	1
+Time taken: 86.491 seconds, Fetched: 291 row(s)
+stopping yarn daemons
+stopping resourcemanager
+comet-14-02.ibnet: stopping nodemanager
+comet-14-02.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+comet-14-01.ibnet: stopping nodemanager
+comet-14-01.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+no proxyserver to stop
+Stopping namenodes on [comet-14-01.ibnet]
+comet-14-01.ibnet: stopping namenode
+comet-14-02.ibnet: stopping datanode
+comet-14-01.ibnet: stopping datanode
+Stopping secondary namenodes [comet-14-01.ibnet]
+comet-14-01.ibnet: stopping secondarynamenode
+Copying Hadoop logs back to /home/vishnug/cometcluster/logs...
+‘/scratch/vishnug/37143415/logs’ -> ‘/home/vishnug/cometcluster/logs’
+‘/scratch/vishnug/37143415/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.log’ -> ‘/home/vishnug/cometcluster/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.log’
+‘/scratch/vishnug/37143415/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.log’ -> ‘/home/vishnug/cometcluster/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.log’
+‘/scratch/vishnug/37143415/logs/yarn-vishnug-resourcemanager-comet-14-01.out’ -> ‘/home/vishnug/cometcluster/logs/yarn-vishnug-resourcemanager-comet-14-01.out’
+‘/scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.log’ -> ‘/home/vishnug/cometcluster/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.log’
+‘/scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.log’ -> ‘/home/vishnug/cometcluster/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.log’
+‘/scratch/vishnug/37143415/logs/SecurityAuth-vishnug.audit’ -> ‘/home/vishnug/cometcluster/logs/SecurityAuth-vishnug.audit’
+‘/scratch/vishnug/37143415/logs/yarn-vishnug-resourcemanager-comet-14-01.log’ -> ‘/home/vishnug/cometcluster/logs/yarn-vishnug-resourcemanager-comet-14-01.log’
+‘/scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.out’ -> ‘/home/vishnug/cometcluster/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.out’
+‘/scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.out’ -> ‘/home/vishnug/cometcluster/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.out’
+‘/scratch/vishnug/37143415/logs/userlogs’ -> ‘/home/vishnug/cometcluster/logs/userlogs’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0001’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/syslog’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/syslog’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/stdout’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/stdout’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/stderr’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/stderr’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0002’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/syslog’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/syslog’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/stdout’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/stdout’
+‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/stderr’ -> ‘/home/vishnug/cometcluster/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/stderr’
+‘/scratch/vishnug/37143415/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.out’ -> ‘/home/vishnug/cometcluster/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.out’
+‘/scratch/vishnug/37143415/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.out’ -> ‘/home/vishnug/cometcluster/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.out’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/nmPrivate’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/11/.tmp_map.xml.crc’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/11/map.xml’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/11’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/12/reduce.xml’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/12/.tmp_reduce.xml.crc’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/12’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/10/reduce.xml’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/10/.tmp_reduce.xml.crc’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/10’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/13/map.xml’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/13/.tmp_map.xml.crc’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/13’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/appcache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/filecache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch’
+removed ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current/fsimage_0000000000000000086.md5’
+removed ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000086’
+removed ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current/fsimage_0000000000000000086’
+removed ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current/fsimage_0000000000000000000’
+removed ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current/VERSION’
+removed directory: ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary/current’
+removed directory: ‘/scratch/vishnug/37143415/tmp/dfs/namesecondary’
+removed directory: ‘/scratch/vishnug/37143415/tmp/dfs’
+removed directory: ‘/scratch/vishnug/37143415/tmp’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/edits_0000000000000000001-0000000000000000086’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/fsimage_0000000000000000086’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/VERSION’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/seen_txid’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/fsimage_0000000000000000086.md5’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/edits_inprogress_0000000000000000087’
+removed ‘/scratch/vishnug/37143415/namenode_data/current/fsimage_0000000000000000000’
+removed directory: ‘/scratch/vishnug/37143415/namenode_data/current’
+removed directory: ‘/scratch/vishnug/37143415/namenode_data’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/VERSION’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/dncp_block_verification.log.curr’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/tmp’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/dncp_block_verification.log.prev’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/rbw’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/VERSION’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741825’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741837_1013.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741860’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741836’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741861_1037.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741826’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741848’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741838’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741836_1012.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741860_1036.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741848_1024.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741837’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741861’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741849’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741850_1026.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741850’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741862’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741849_1025.meta’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/dfsUsed’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data’
+removed directory: ‘/scratch/vishnug/37143415/pids’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/vishnug/37143415/logs/yarn-vishnug-resourcemanager-comet-14-01.out’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/vishnug/37143415/logs/SecurityAuth-vishnug.audit’
+removed ‘/scratch/vishnug/37143415/logs/yarn-vishnug-resourcemanager-comet-14-01.log’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003/stderr’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000003’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001/stderr’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000001’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-secondarynamenode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-namenode-comet-14-01.sdsc.edu.out’
+removed directory: ‘/scratch/vishnug/37143415/logs’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/filecache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/nmPrivate’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/15/.tmp_map.xml.crc’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/15/map.xml’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/15’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/12/.tmp_reduce.xml.crc’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/12/reduce.xml’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/12’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/11/.tmp_map.xml.crc’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/11/map.xml’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/11’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/13/.tmp_map.xml.crc’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/13/map.xml’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/13’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/14/reduce.xml’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/14/.tmp_reduce.xml.crc’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/14’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/10/reduce.xml’
+removed ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/10/.tmp_reduce.xml.crc’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache/10’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/filecache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug/appcache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache/vishnug’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch/usercache’
+removed directory: ‘/scratch/vishnug/37143415/mapred_scratch’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/VERSION’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/dfsUsed’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/VERSION’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741849’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741862’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741850’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741848_1024.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741837’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741849_1025.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741861’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741850_1026.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741838’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741826’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741837_1013.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741861_1037.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741848’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741836_1012.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741860_1036.meta’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741860’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741825’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0/blk_1073741836’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0/subdir0’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized/subdir0’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/finalized’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current/rbw’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/current’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/tmp’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/dncp_block_verification.log.prev’
+removed ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358/dncp_block_verification.log.curr’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current/BP-1935691419-198.202.112.231-1606260378358’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data/current’
+removed directory: ‘/scratch/vishnug/37143415/hdfs_data’
+removed directory: ‘/scratch/vishnug/37143415/pids’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-02.sdsc.edu.out’
+removed ‘/scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-02.sdsc.edu.log’
+removed ‘/scratch/vishnug/37143415/logs/SecurityAuth-vishnug.audit’
+removed ‘/scratch/vishnug/37143415/logs/yarn-vishnug-nodemanager-comet-14-02.sdsc.edu.out’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000001/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000001/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000001/stderr’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000001’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000002/stderr’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000002/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000002/syslog’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001/container_1606260399414_0001_01_000002’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0001’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000002/stderr’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000002/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000002/stdout’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000002’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000003/stderr’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000003/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000003/syslog’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002/container_1606260399414_0002_01_000003’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0002’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000003/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000003/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000003/stderr’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000003’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000002/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000002/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000002/stderr’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000002’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000001/syslog’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000001/stdout’
+removed ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000001/stderr’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003/container_1606260399414_0003_01_000001’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs/application_1606260399414_0003’
+removed directory: ‘/scratch/vishnug/37143415/logs/userlogs’
+removed ‘/scratch/vishnug/37143415/logs/hadoop-vishnug-datanode-comet-14-02.sdsc.edu.log’
+removed directory: ‘/scratch/vishnug/37143415/logs’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08_6966732371437889685/jsp’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08_6966732371437889685/.active’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08_6966732371437889685’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_5306694776586115612/jsp’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_5306694776586115612/.active’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_5306694776586115612’
+removed directory: ‘/tmp/Jetty_comet.14.01_ibnet_50090_secondary____.df0qd1_5902210644841300669/jsp’
+removed directory: ‘/tmp/Jetty_comet.14.01_ibnet_50090_secondary____.df0qd1_5902210644841300669/.active’
+removed directory: ‘/tmp/Jetty_comet.14.01_ibnet_50090_secondary____.df0qd1_5902210644841300669’
